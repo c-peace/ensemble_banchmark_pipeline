@@ -1,0 +1,33 @@
+schema_version: 1
+experiment:
+  name: baseline
+  wandb_project: ensemble
+  wandb_entity: null
+  wandb_mode: online
+data:
+  gcp_project: YOUR_GCP_PROJECT
+  gcs_uri: gs://YOUR_BUCKET/prepared
+  sample_rate: 44100
+  smoke: false
+  excluded_train_ids: [sod_507, sod_968]
+training:
+  epochs: 3
+  tiny: false
+  steps_per_shard: null
+  batch_size: 16
+  samples_per_track: 64
+  segment_seconds: 6.0
+  save_every: 50
+  seed: 42
+  learning_rate: 0.0001
+  weight_decay: 0.00001
+  max_grad_norm: 5.0
+  loss_type: baseline
+  log_mel_weight: 0.1
+evaluation:
+  enabled: true
+  chunk_seconds: 20.0
+  allow_partial: false
+  max_seconds: null
+  reuse_predictions: true
+  include_metrics: false

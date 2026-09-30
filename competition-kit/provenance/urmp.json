@@ -1,0 +1,28 @@
+{
+  "retrieved": "2026-09-22",
+  "original_dataset": "https://doi.org/10.5061/dryad.ng3r749",
+  "original_license": "CC0-1.0",
+  "license_evidence": "dryad-dataset-metadata.json",
+  "mirror": "https://www.kaggle.com/datasets/alonhaviv/multi-modal-music-performance-urmp",
+  "mirror_version": 1,
+  "mirror_archive_bytes": 12097800540,
+  "mirror_archive_md5": "37e6e24cafa72a514e03408148558de4",
+  "download_endpoint": "https://www.kaggle.com/api/v1/datasets/download/alonhaviv/multi-modal-music-performance-urmp",
+  "method": "ZIP central-directory discovery and selected-member HTTP Range downloads; decompressed member CRC32 validated, SHA256 computed. Full archive checksum not independently calculated.",
+  "validation_ids": [
+    28,
+    29,
+    32,
+    34,
+    38,
+    43
+  ],
+  "file_count": 26,
+  "native_format": {
+    "sample_rate": 48000,
+    "channels": 1,
+    "pcm_bits": 24
+  },
+  "audio_audit": "verified-audio.json",
+  "note": "Kaggle user repack links official URMP page and lists CC0. Original Dryad authors metadata confirms CC0; no byte-for-byte comparison against inaccessible Dryad archive. No audio transformations performed."
+}

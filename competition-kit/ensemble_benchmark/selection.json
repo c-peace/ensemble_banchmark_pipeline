@@ -1,0 +1,3829 @@
+{
+  "version": "v1-draft-2026-09-22",
+  "status": "metadata selection complete; audio generation, score/MIDI duplicate verification, licensing review and baseline execution pending",
+  "official_classes": [
+    "Violin",
+    "Viola",
+    "Cello",
+    "Bass",
+    "Flute",
+    "Clarinet",
+    "Oboe",
+    "Bassoon",
+    "Horn",
+    "Trumpet",
+    "Trombone",
+    "Tuba",
+    "Harp",
+    "Timpani",
+    "untunedpercussion"
+  ],
+  "raw_to_output_aliases": {
+    "Violin_1": "Violin",
+    "Violin_2": "Violin",
+    "Piccolo": "Flute",
+    "coranglais": "Oboe"
+  },
+  "audio": {
+    "sample_rate": 44100,
+    "channels": 1,
+    "distribution_format": "WAV FLOAT32",
+    "synthsod_microphone": "Tree",
+    "normalization": "shared scene gain to mixture peak 0.75; competition-specific extension"
+  },
+  "selection_policy": "URMP anchors override; other selected work groups prefer test if any original test recording exists; training members of protected groups are excluded, not added to evaluation. Unselected protected recordings are reserved/forbidden for training. Group identities from names are conservative and provisional.",
+  "train": {
+    "original_count": 408,
+    "allowed_count": 365,
+    "allowed_sod_ids": [
+      "35",
+      "39",
+      "43",
+      "48",
+      "146",
+      "148",
+      "149",
+      "162",
+      "163",
+      "164",
+      "165",
+      "166",
+      "216",
+      "220",
+      "247",
+      "251",
+      "254",
+      "255",
+      "257",
+      "269",
+      "272",
+      "278",
+      "287",
+      "296",
+      "299",
+      "301",
+      "305",
+      "306",
+      "309",
+      "317",
+      "318",
+      "322",
+      "326",
+      "338",
+      "339",
+      "340",
+      "341",
+      "362",
+      "388",
+      "394",
+      "403",
+      "407",
+      "419",
+      "423",
+      "424",
+      "425",
+      "429",
+      "435",
+      "456",
+      "463",
+      "466",
+      "467",
+      "468",
+      "469",
+      "470",
+      "471",
+      "483",
+      "492",
+      "493",
+      "494",
+      "495",
+      "496",
+      "497",
+      "498",
+      "499",
+      "500",
+      "501",
+      "502",
+      "503",
+      "507",
+      "508",
+      "509",
+      "510",
+      "511",
+      "512",
+      "513",
+      "514",
+      "515",
+      "516",
+      "517",
+      "518",
+      "525",
+      "526",
+      "527",
+      "531",
+      "532",
+      "533",
+      "534",
+      "535",
+      "536",
+      "537",
+      "538",
+      "539",
+      "540",
+      "541",
+      "542",
+      "543",
+      "544",
+      "545",
+      "753",
+      "755",
+      "809",
+      "810",
+      "811",
+      "812",
+      "813",
+      "814",
+      "815",
+      "816",
+      "817",
+      "818",
+      "819",
+      "820",
+      "821",
+      "822",
+      "823",
+      "824",
+      "825",
+      "826",
+      "827",
+      "828",
+      "829",
+      "830",
+      "831",
+      "832",
+      "833",
+      "834",
+      "835",
+      "836",
+      "837",
+      "838",
+      "839",
+      "840",
+      "841",
+      "842",
+      "843",
+      "844",
+      "845",
+      "846",
+      "847",
+      "848",
+      "849",
+      "850",
+      "851",
+      "852",
+      "853",
+      "854",
+      "855",
+      "856",
+      "857",
+      "858",
+      "859",
+      "860",
+      "861",
+      "862",
+      "863",
+      "864",
+      "865",
+      "866",
+      "867",
+      "868",
+      "869",
+      "870",
+      "871",
+      "872",
+      "873",
+      "874",
+      "875",
+      "876",
+      "877",
+      "879",
+      "883",
+      "887",
+      "891",
+      "893",
+      "895",
+      "899",
+      "901",
+      "904",
+      "905",
+      "906",
+      "907",
+      "908",
+      "909",
+      "910",
+      "911",
+      "912",
+      "913",
+      "914",
+      "915",
+      "916",
+      "917",
+      "918",
+      "919",
+      "920",
+      "922",
+      "923",
+      "924",
+      "925",
+      "926",
+      "928",
+      "930",
+      "931",
+      "932",
+      "933",
+      "934",
+      "935",
+      "936",
+      "937",
+      "938",
+      "939",
+      "940",
+      "941",
+      "942",
+      "943",
+      "944",
+      "945",
+      "946",
+      "947",
+      "948",
+      "949",
+      "950",
+      "951",
+      "952",
+      "963",
+      "967",
+      "968",
+      "980",
+      "981",
+      "982",
+      "1002",
+      "1003",
+      "1005",
+      "1006",
+      "1008",
+      "1025",
+      "1026",
+      "1027",
+      "1028",
+      "1031",
+      "1038",
+      "1040",
+      "1042",
+      "1043",
+      "1045",
+      "1046",
+      "1047",
+      "1048",
+      "1050",
+      "1051",
+      "1052",
+      "1053",
+      "1055",
+      "1060",
+      "1061",
+      "1062",
+      "1063",
+      "1064",
+      "1065",
+      "1066",
+      "1067",
+      "1068",
+      "1069",
+      "1070",
+      "1071",
+      "1086",
+      "1089",
+      "1090",
+      "1092",
+      "1095",
+      "1099",
+      "1100",
+      "1101",
+      "1102",
+      "1103",
+      "1104",
+      "1114",
+      "1115",
+      "1116",
+      "1117",
+      "1118",
+      "1120",
+      "1121",
+      "1122",
+      "1124",
+      "1128",
+      "1157",
+      "1161",
+      "1163",
+      "1165",
+      "1166",
+      "1167",
+      "1168",
+      "1169",
+      "1170",
+      "1171",
+      "1172",
+      "1184",
+      "1185",
+      "1186",
+      "1187",
+      "1188",
+      "1189",
+      "1190",
+      "1191",
+      "1192",
+      "1193",
+      "1194",
+      "1195",
+      "1196",
+      "1197",
+      "1198",
+      "1223",
+      "1225",
+      "1226",
+      "1227",
+      "1228",
+      "1229",
+      "1230",
+      "1231",
+      "1232",
+      "1233",
+      "1236",
+      "1239",
+      "1241",
+      "1247",
+      "1248",
+      "1250",
+      "1257",
+      "1268",
+      "1269",
+      "1281",
+      "1305",
+      "1318",
+      "1319",
+      "1321",
+      "1322",
+      "1323",
+      "1324",
+      "1325",
+      "1326",
+      "1327",
+      "1329",
+      "1330",
+      "1331",
+      "1332",
+      "1333",
+      "1336",
+      "1354",
+      "1355",
+      "1362",
+      "1365",
+      "1368",
+      "1370",
+      "1379",
+      "1390",
+      "1391",
+      "1392",
+      "1394",
+      "1408",
+      "1409",
+      "1418",
+      "1432",
+      "1433",
+      "1435"
+    ],
+    "quarantined": [
+      {
+        "sod_id": "51",
+        "name": "art_of_fugue_1080_2_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "55",
+        "name": "art_of_fugue_contrapunctum_13_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "58",
+        "name": "art_of_fugue_contrapunctum_4_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "62",
+        "name": "art_of_fugue_contrapunctum_9_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "151",
+        "name": "suite_2_1067_2_orch",
+        "original_split": "train",
+        "group": "bach_suite_1067",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "154",
+        "name": "suite_2_1067_5_orch",
+        "original_split": "train",
+        "group": "bach_suite_1067",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "155",
+        "name": "suite_2_1067_6_orch",
+        "original_split": "train",
+        "group": "bach_suite_1067",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "156",
+        "name": "suite_2_1067_7_orch",
+        "original_split": "train",
+        "group": "bach_suite_1067",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "159",
+        "name": "suite_3_1068_3_orch",
+        "original_split": "train",
+        "group": "bach_suite_1068",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "160",
+        "name": "suite_3_1068_4_orch",
+        "original_split": "train",
+        "group": "bach_suite_1068",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "161",
+        "name": "suite_3_1068_5_orch",
+        "original_split": "train",
+        "group": "bach_suite_1068",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "262",
+        "name": "minor_works_hess-238-5_orch",
+        "original_split": "train",
+        "group": "hess238",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "265",
+        "name": "minor_works_hess-243-1_orch",
+        "original_split": "train",
+        "group": "hess243",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "268",
+        "name": "minor_works_hess-243-4_orch",
+        "original_split": "train",
+        "group": "hess243",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "329",
+        "name": "symphonie_fantastique_1_orch",
+        "original_split": "train",
+        "group": "symphonie_fantastique",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "331",
+        "name": "symphonie_fantastique_3_orch",
+        "original_split": "train",
+        "group": "symphonie_fantastique",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "440",
+        "name": "slavonic_dances_46_2_orch",
+        "original_split": "train",
+        "group": "slavonic46_potential",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "444",
+        "name": "slavonic_dances_46_6_orch",
+        "original_split": "train",
+        "group": "slavonic46_potential",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "447",
+        "name": "strings_serenade_1_orch",
+        "original_split": "train",
+        "group": "strings_serenade",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "453",
+        "name": "symphonic_variations_20-27_orch",
+        "original_split": "train",
+        "group": "symphonic_variations",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "489",
+        "name": "symphonie_1_orch",
+        "original_split": "train",
+        "group": "symphonie",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "491",
+        "name": "symphonie_3_orch",
+        "original_split": "train",
+        "group": "symphonie",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "727",
+        "name": "organ_concerto_4_3_1_orch",
+        "original_split": "train",
+        "group": "organ_concerto_4_3",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "801",
+        "name": "string_quartet_10_3_orch",
+        "original_split": "train",
+        "group": "string_quartet_10",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "806",
+        "name": "string_quartet_11_3_orch",
+        "original_split": "train",
+        "group": "string_quartet_11",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "808",
+        "name": "string_quartet_11_5_orch",
+        "original_split": "train",
+        "group": "string_quartet_11",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "999",
+        "name": "glagolitic_mass_8_orch",
+        "original_split": "train",
+        "group": "glagolitic_mass",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "1010",
+        "name": "chorale-preludes_1_orch",
+        "original_split": "train",
+        "group": "chorale_preludes",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "1014",
+        "name": "chorale-preludes_5_orch",
+        "original_split": "train",
+        "group": "chorale_preludes",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "1021",
+        "name": "fantasias_4_orch",
+        "original_split": "train",
+        "group": "fantasias_collection",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1022",
+        "name": "fantasias_5_orch",
+        "original_split": "train",
+        "group": "fantasias_collection",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1024",
+        "name": "fantasias_7_orch",
+        "original_split": "train",
+        "group": "fantasias_collection",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1270",
+        "name": "fugues_arranged_for_brass_quartet_1_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1271",
+        "name": "fugues_arranged_for_brass_quartet_2_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1272",
+        "name": "fugues_arranged_for_brass_quartet_3_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1273",
+        "name": "fugues_arranged_for_brass_quartet_4_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1274",
+        "name": "fugues_arranged_for_brass_quartet_5_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1275",
+        "name": "fugues_arranged_for_brass_quartet_6_orch",
+        "original_split": "train",
+        "group": "bach_fugue_potential",
+        "assigned_split": "validation",
+        "selected": false
+      },
+      {
+        "sod_id": "1290",
+        "name": "partita_c-minor_5_orch",
+        "original_split": "train",
+        "group": "partita_cminor",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "1291",
+        "name": "partita_c-minor_6_orch",
+        "original_split": "train",
+        "group": "partita_cminor",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "1292",
+        "name": "partita_c-minor_7_orch",
+        "original_split": "train",
+        "group": "partita_cminor",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "1293",
+        "name": "partita_c-minor_8_orch",
+        "original_split": "train",
+        "group": "partita_cminor",
+        "assigned_split": "test",
+        "selected": false
+      },
+      {
+        "sod_id": "1294",
+        "name": "partita_c-minor_9_orch",
+        "original_split": "train",
+        "group": "partita_cminor",
+        "assigned_split": "test",
+        "selected": false
+      }
+    ]
+  },
+  "protected_synthsod_records": [
+    {
+      "sod_id": "51",
+      "name": "art_of_fugue_1080_2_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "55",
+      "name": "art_of_fugue_contrapunctum_13_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "58",
+      "name": "art_of_fugue_contrapunctum_4_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "62",
+      "name": "art_of_fugue_contrapunctum_9_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "151",
+      "name": "suite_2_1067_2_orch",
+      "original_split": "train",
+      "group": "bach_suite_1067",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "154",
+      "name": "suite_2_1067_5_orch",
+      "original_split": "train",
+      "group": "bach_suite_1067",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "155",
+      "name": "suite_2_1067_6_orch",
+      "original_split": "train",
+      "group": "bach_suite_1067",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "156",
+      "name": "suite_2_1067_7_orch",
+      "original_split": "train",
+      "group": "bach_suite_1067",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "159",
+      "name": "suite_3_1068_3_orch",
+      "original_split": "train",
+      "group": "bach_suite_1068",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "160",
+      "name": "suite_3_1068_4_orch",
+      "original_split": "train",
+      "group": "bach_suite_1068",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "161",
+      "name": "suite_3_1068_5_orch",
+      "original_split": "train",
+      "group": "bach_suite_1068",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "262",
+      "name": "minor_works_hess-238-5_orch",
+      "original_split": "train",
+      "group": "hess238",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "265",
+      "name": "minor_works_hess-243-1_orch",
+      "original_split": "train",
+      "group": "hess243",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "268",
+      "name": "minor_works_hess-243-4_orch",
+      "original_split": "train",
+      "group": "hess243",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "329",
+      "name": "symphonie_fantastique_1_orch",
+      "original_split": "train",
+      "group": "symphonie_fantastique",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "331",
+      "name": "symphonie_fantastique_3_orch",
+      "original_split": "train",
+      "group": "symphonie_fantastique",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "440",
+      "name": "slavonic_dances_46_2_orch",
+      "original_split": "train",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "444",
+      "name": "slavonic_dances_46_6_orch",
+      "original_split": "train",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "447",
+      "name": "strings_serenade_1_orch",
+      "original_split": "train",
+      "group": "strings_serenade",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "453",
+      "name": "symphonic_variations_20-27_orch",
+      "original_split": "train",
+      "group": "symphonic_variations",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "489",
+      "name": "symphonie_1_orch",
+      "original_split": "train",
+      "group": "symphonie",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "491",
+      "name": "symphonie_3_orch",
+      "original_split": "train",
+      "group": "symphonie",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "727",
+      "name": "organ_concerto_4_3_1_orch",
+      "original_split": "train",
+      "group": "organ_concerto_4_3",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "801",
+      "name": "string_quartet_10_3_orch",
+      "original_split": "train",
+      "group": "string_quartet_10",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "806",
+      "name": "string_quartet_11_3_orch",
+      "original_split": "train",
+      "group": "string_quartet_11",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "808",
+      "name": "string_quartet_11_5_orch",
+      "original_split": "train",
+      "group": "string_quartet_11",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "999",
+      "name": "glagolitic_mass_8_orch",
+      "original_split": "train",
+      "group": "glagolitic_mass",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "1010",
+      "name": "chorale-preludes_1_orch",
+      "original_split": "train",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "1014",
+      "name": "chorale-preludes_5_orch",
+      "original_split": "train",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "1021",
+      "name": "fantasias_4_orch",
+      "original_split": "train",
+      "group": "fantasias_collection",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1022",
+      "name": "fantasias_5_orch",
+      "original_split": "train",
+      "group": "fantasias_collection",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1024",
+      "name": "fantasias_7_orch",
+      "original_split": "train",
+      "group": "fantasias_collection",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1270",
+      "name": "fugues_arranged_for_brass_quartet_1_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1271",
+      "name": "fugues_arranged_for_brass_quartet_2_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1272",
+      "name": "fugues_arranged_for_brass_quartet_3_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1273",
+      "name": "fugues_arranged_for_brass_quartet_4_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1274",
+      "name": "fugues_arranged_for_brass_quartet_5_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1275",
+      "name": "fugues_arranged_for_brass_quartet_6_orch",
+      "original_split": "train",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "1290",
+      "name": "partita_c-minor_5_orch",
+      "original_split": "train",
+      "group": "partita_cminor",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "1291",
+      "name": "partita_c-minor_6_orch",
+      "original_split": "train",
+      "group": "partita_cminor",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "1292",
+      "name": "partita_c-minor_7_orch",
+      "original_split": "train",
+      "group": "partita_cminor",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "1293",
+      "name": "partita_c-minor_8_orch",
+      "original_split": "train",
+      "group": "partita_cminor",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "1294",
+      "name": "partita_c-minor_9_orch",
+      "original_split": "train",
+      "group": "partita_cminor",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "53",
+      "name": "art_of_fugue_contrapunctum_10_orch",
+      "original_split": "evaluation",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "56",
+      "name": "art_of_fugue_contrapunctum_15_orch",
+      "original_split": "evaluation",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "59",
+      "name": "art_of_fugue_contrapunctum_5_orch",
+      "original_split": "evaluation",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "153",
+      "name": "suite_2_1067_4_orch",
+      "original_split": "evaluation",
+      "group": "bach_suite_1067",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "244",
+      "name": "adagio_lamentoso_on_b-a-c-h_orch",
+      "original_split": "evaluation",
+      "group": "adagio_lamentoso_on_b-a-c-h",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "248",
+      "name": "coriolan_orch",
+      "original_split": "evaluation",
+      "group": "coriolan",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "250",
+      "name": "minor_works_hess-233c_orch",
+      "original_split": "evaluation",
+      "group": "hess233",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "281",
+      "name": "minor_works_woo-62-2_orch",
+      "original_split": "evaluation",
+      "group": "minor_works_woo-62-2",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "300",
+      "name": "serenade_25_orch",
+      "original_split": "evaluation",
+      "group": "serenade_25",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "310",
+      "name": "string_quartet_hess-34_orch",
+      "original_split": "evaluation",
+      "group": "string_quartet_hess-34",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "330",
+      "name": "symphonie_fantastique_2_orch",
+      "original_split": "evaluation",
+      "group": "symphonie_fantastique",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "359",
+      "name": "ouverture_81_orch",
+      "original_split": "evaluation",
+      "group": "ouverture_81",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "431",
+      "name": "nocturnes_2_orch",
+      "original_split": "evaluation",
+      "group": "nocturnes",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "442",
+      "name": "slavonic_dances_46_4_orch",
+      "original_split": "evaluation",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "446",
+      "name": "slavonic_dances_46_8_orch",
+      "original_split": "evaluation",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "450",
+      "name": "strings_serenade_4_orch",
+      "original_split": "evaluation",
+      "group": "strings_serenade",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "756",
+      "name": "in_domini_speravi_orch",
+      "original_split": "evaluation",
+      "group": "in_domini_speravi",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "799",
+      "name": "string_quartet_10_1_orch",
+      "original_split": "evaluation",
+      "group": "string_quartet_10",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "804",
+      "name": "string_quartet_11_1_orch",
+      "original_split": "evaluation",
+      "group": "string_quartet_11",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1012",
+      "name": "chorale-preludes_3_orch",
+      "original_split": "evaluation",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1016",
+      "name": "chorale-preludes_7_orch",
+      "original_split": "evaluation",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1018",
+      "name": "fantasias_1_orch",
+      "original_split": "evaluation",
+      "group": "fantasias_collection",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "1020",
+      "name": "fantasias_3_orch",
+      "original_split": "evaluation",
+      "group": "fantasias_collection",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "1023",
+      "name": "fantasias_6_orch",
+      "original_split": "evaluation",
+      "group": "fantasias_collection",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "1288",
+      "name": "partita_c-minor_3_orch",
+      "original_split": "evaluation",
+      "group": "partita_cminor",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "50",
+      "name": "art_of_fugue_1080_1_orch",
+      "original_split": "test",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "52",
+      "name": "art_of_fugue_contrapunctum_1_orch",
+      "original_split": "test",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "54",
+      "name": "art_of_fugue_contrapunctum_11_orch",
+      "original_split": "test",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "57",
+      "name": "art_of_fugue_contrapunctum_3_orch",
+      "original_split": "test",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "60",
+      "name": "art_of_fugue_contrapunctum_6_orch",
+      "original_split": "test",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": true
+    },
+    {
+      "sod_id": "61",
+      "name": "art_of_fugue_contrapunctum_8_orch",
+      "original_split": "test",
+      "group": "bach_fugue_potential",
+      "assigned_split": "validation",
+      "selected": false
+    },
+    {
+      "sod_id": "150",
+      "name": "suite_2_1067_1_orch",
+      "original_split": "test",
+      "group": "bach_suite_1067",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "152",
+      "name": "suite_2_1067_3_orch",
+      "original_split": "test",
+      "group": "bach_suite_1067",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "157",
+      "name": "suite_3_1068_1_orch",
+      "original_split": "test",
+      "group": "bach_suite_1068",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "158",
+      "name": "suite_3_1068_2_orch",
+      "original_split": "test",
+      "group": "bach_suite_1068",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "243",
+      "name": "18_2_sketches_orch",
+      "original_split": "test",
+      "group": "18_2_sketches",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "249",
+      "name": "minor_works_hess-233_orch",
+      "original_split": "test",
+      "group": "hess233",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "259",
+      "name": "minor_works_hess-238-1_orch",
+      "original_split": "test",
+      "group": "hess238",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "261",
+      "name": "minor_works_hess-238-3_orch",
+      "original_split": "test",
+      "group": "hess238",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "267",
+      "name": "minor_works_hess-243-3_orch",
+      "original_split": "test",
+      "group": "hess243",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "282",
+      "name": "minuet_hess-33_orch",
+      "original_split": "test",
+      "group": "minuet_hess-33",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "298",
+      "name": "prelude_and_fugue_hess-30_orch",
+      "original_split": "test",
+      "group": "prelude_and_fugue_hess-30",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "303",
+      "name": "string-quartet_18-6_3_orch",
+      "original_split": "test",
+      "group": "string-quartet_18-6_3",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "328",
+      "name": "ave_maria_orch",
+      "original_split": "test",
+      "group": "ave_maria",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "369",
+      "name": "young_person_guide_orchestra_orch",
+      "original_split": "test",
+      "group": "young_person_guide_orchestra",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "439",
+      "name": "slavonic_dances_46_1_orch",
+      "original_split": "test",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "441",
+      "name": "slavonic_dances_46_3_orch",
+      "original_split": "test",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "443",
+      "name": "slavonic_dances_46_5_orch",
+      "original_split": "test",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "445",
+      "name": "slavonic_dances_46_7_orch",
+      "original_split": "test",
+      "group": "slavonic46_potential",
+      "assigned_split": "test",
+      "selected": false
+    },
+    {
+      "sod_id": "448",
+      "name": "strings_serenade_2_orch",
+      "original_split": "test",
+      "group": "strings_serenade",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "449",
+      "name": "strings_serenade_3_orch",
+      "original_split": "test",
+      "group": "strings_serenade",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "451",
+      "name": "strings_serenade_5_orch",
+      "original_split": "test",
+      "group": "strings_serenade",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "452",
+      "name": "symphonic_variations_1-19_orch",
+      "original_split": "test",
+      "group": "symphonic_variations",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "490",
+      "name": "symphonie_2_orch",
+      "original_split": "test",
+      "group": "symphonie",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "729",
+      "name": "organ_concerto_4_3_3_orch",
+      "original_split": "test",
+      "group": "organ_concerto_4_3",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "735",
+      "name": "organ_concerto_4_6_1_orch",
+      "original_split": "test",
+      "group": "organ_concerto_4_6",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "736",
+      "name": "organ_concerto_4_6_2_orch",
+      "original_split": "test",
+      "group": "organ_concerto_4_6",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "800",
+      "name": "string_quartet_10_2_orch",
+      "original_split": "test",
+      "group": "string_quartet_10",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "802",
+      "name": "string_quartet_10_4_orch",
+      "original_split": "test",
+      "group": "string_quartet_10",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "803",
+      "name": "string_quartet_10_5_orch",
+      "original_split": "test",
+      "group": "string_quartet_10",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "805",
+      "name": "string_quartet_11_2_orch",
+      "original_split": "test",
+      "group": "string_quartet_11",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "807",
+      "name": "string_quartet_11_4_orch",
+      "original_split": "test",
+      "group": "string_quartet_11",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "998",
+      "name": "glagolitic_mass_1_orch",
+      "original_split": "test",
+      "group": "glagolitic_mass",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1007",
+      "name": "lustspiel_orch",
+      "original_split": "test",
+      "group": "lustspiel",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1011",
+      "name": "chorale-preludes_2_orch",
+      "original_split": "test",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1013",
+      "name": "chorale-preludes_4_orch",
+      "original_split": "test",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1015",
+      "name": "chorale-preludes_6_orch",
+      "original_split": "test",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1017",
+      "name": "chorale-preludes_8_orch",
+      "original_split": "test",
+      "group": "chorale_preludes",
+      "assigned_split": "test",
+      "selected": true
+    },
+    {
+      "sod_id": "1289",
+      "name": "partita_c-minor_4_orch",
+      "original_split": "test",
+      "group": "partita_cminor",
+      "assigned_split": "test",
+      "selected": true
+    }
+  ],
+  "synthsod_scenes": [
+    {
+      "scene_id": "sod_50_native",
+      "parent_id": "50",
+      "parent_name": "art_of_fugue_1080_1_orch",
+      "original_split": "test",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_52_native",
+      "parent_id": "52",
+      "parent_name": "art_of_fugue_contrapunctum_1_orch",
+      "original_split": "test",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_53_native",
+      "parent_id": "53",
+      "parent_name": "art_of_fugue_contrapunctum_10_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_54_native",
+      "parent_id": "54",
+      "parent_name": "art_of_fugue_contrapunctum_11_orch",
+      "original_split": "test",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_56_native",
+      "parent_id": "56",
+      "parent_name": "art_of_fugue_contrapunctum_15_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_57_native",
+      "parent_id": "57",
+      "parent_name": "art_of_fugue_contrapunctum_3_orch",
+      "original_split": "test",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_59_native",
+      "parent_id": "59",
+      "parent_name": "art_of_fugue_contrapunctum_5_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_60_native",
+      "parent_id": "60",
+      "parent_name": "art_of_fugue_contrapunctum_6_orch",
+      "original_split": "test",
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_150_native",
+      "parent_id": "150",
+      "parent_name": "suite_2_1067_1_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "bach_suite_1067",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Flute",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Flute",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_152_native",
+      "parent_id": "152",
+      "parent_name": "suite_2_1067_3_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "bach_suite_1067",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Flute",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Flute",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_153_native",
+      "parent_id": "153",
+      "parent_name": "suite_2_1067_4_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "bach_suite_1067",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Flute",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Flute",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_158_native",
+      "parent_id": "158",
+      "parent_name": "suite_3_1068_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "bach_suite_1068",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_243_native",
+      "parent_id": "243",
+      "parent_name": "18_2_sketches_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "18_2_sketches",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_244_native",
+      "parent_id": "244",
+      "parent_name": "adagio_lamentoso_on_b-a-c-h_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "adagio_lamentoso_on_b-a-c-h",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_248_submix1",
+      "parent_id": "248",
+      "parent_name": "coriolan_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "coriolan",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Violin_1",
+        "Viola",
+        "Cello",
+        "Bass"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_248_submix2",
+      "parent_id": "248",
+      "parent_name": "coriolan_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "coriolan",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Flute",
+        "Clarinet",
+        "Oboe",
+        "Bassoon",
+        "Timpani"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe",
+        "Timpani"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_249_native",
+      "parent_id": "249",
+      "parent_name": "minor_works_hess-233_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "hess233",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_250_native",
+      "parent_id": "250",
+      "parent_name": "minor_works_hess-233c_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "hess233",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_259_native",
+      "parent_id": "259",
+      "parent_name": "minor_works_hess-238-1_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "hess238",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "coranglais"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_261_native",
+      "parent_id": "261",
+      "parent_name": "minor_works_hess-238-3_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "hess238",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Horn",
+        "Trombone",
+        "Trumpet",
+        "coranglais"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Horn",
+        "Oboe",
+        "Trombone",
+        "Trumpet"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_267_native",
+      "parent_id": "267",
+      "parent_name": "minor_works_hess-243-3_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "hess243",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_281_native",
+      "parent_id": "281",
+      "parent_name": "minor_works_woo-62-2_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "minor_works_woo-62-2",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_282_native",
+      "parent_id": "282",
+      "parent_name": "minuet_hess-33_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "minuet_hess-33",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_298_native",
+      "parent_id": "298",
+      "parent_name": "prelude_and_fugue_hess-30_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "prelude_and_fugue_hess-30",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_300_native",
+      "parent_id": "300",
+      "parent_name": "serenade_25_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "serenade_25",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Flute",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Flute",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_303_native",
+      "parent_id": "303",
+      "parent_name": "string-quartet_18-6_3_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "string-quartet_18-6_3",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_310_native",
+      "parent_id": "310",
+      "parent_name": "string_quartet_hess-34_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "string_quartet_hess-34",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_328_native",
+      "parent_id": "328",
+      "parent_name": "ave_maria_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "ave_maria",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_330_submix1",
+      "parent_id": "330",
+      "parent_name": "symphonie_fantastique_2_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "symphonie_fantastique",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Harp",
+        "Horn",
+        "Clarinet",
+        "Violin_1"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Clarinet",
+        "Harp",
+        "Horn",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_330_submix2",
+      "parent_id": "330",
+      "parent_name": "symphonie_fantastique_2_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "symphonie_fantastique",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Harp",
+        "Flute",
+        "Oboe",
+        "Viola",
+        "Cello"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Flute",
+        "Harp",
+        "Oboe",
+        "Viola"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_359_submix1",
+      "parent_id": "359",
+      "parent_name": "ouverture_81_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "ouverture_81",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Tuba",
+        "Trombone",
+        "Trumpet",
+        "Horn"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet",
+        "Tuba"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_359_submix2",
+      "parent_id": "359",
+      "parent_name": "ouverture_81_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "ouverture_81",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Tuba",
+        "Bassoon",
+        "Flute",
+        "Violin_1",
+        "Timpani"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bassoon",
+        "Flute",
+        "Timpani",
+        "Tuba",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_369_submix1",
+      "parent_id": "369",
+      "parent_name": "young_person_guide_orchestra_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "young_person_guide_orchestra",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Tuba",
+        "Trombone",
+        "Trumpet",
+        "Horn"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet",
+        "Tuba"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_369_submix2",
+      "parent_id": "369",
+      "parent_name": "young_person_guide_orchestra_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "young_person_guide_orchestra",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Harp",
+        "untunedpercussion",
+        "Timpani",
+        "Flute",
+        "Oboe"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Flute",
+        "Harp",
+        "Oboe",
+        "Timpani",
+        "untunedpercussion"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_431_submix1",
+      "parent_id": "431",
+      "parent_name": "nocturnes_2_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "nocturnes",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "untunedpercussion",
+        "Harp",
+        "Oboe",
+        "Bass"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bass",
+        "Harp",
+        "Oboe",
+        "untunedpercussion"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_431_submix2",
+      "parent_id": "431",
+      "parent_name": "nocturnes_2_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "nocturnes",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "untunedpercussion",
+        "Trumpet",
+        "Trombone",
+        "Clarinet",
+        "Timpani"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Clarinet",
+        "Timpani",
+        "Trombone",
+        "Trumpet",
+        "untunedpercussion"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_448_native",
+      "parent_id": "448",
+      "parent_name": "strings_serenade_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "strings_serenade",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_449_native",
+      "parent_id": "449",
+      "parent_name": "strings_serenade_3_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "strings_serenade",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_450_native",
+      "parent_id": "450",
+      "parent_name": "strings_serenade_4_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "strings_serenade",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_451_native",
+      "parent_id": "451",
+      "parent_name": "strings_serenade_5_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "strings_serenade",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_452_submix1",
+      "parent_id": "452",
+      "parent_name": "symphonic_variations_1-19_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "symphonic_variations",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "untunedpercussion",
+        "Trombone",
+        "Trumpet",
+        "Horn"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet",
+        "untunedpercussion"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_452_submix2",
+      "parent_id": "452",
+      "parent_name": "symphonic_variations_1-19_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "symphonic_variations",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "untunedpercussion",
+        "Timpani",
+        "Bassoon",
+        "Clarinet",
+        "Violin_1"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Timpani",
+        "Violin",
+        "untunedpercussion"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_490_submix1",
+      "parent_id": "490",
+      "parent_name": "symphonie_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "symphonie",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Harp",
+        "Horn",
+        "Clarinet",
+        "Oboe"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Clarinet",
+        "Harp",
+        "Horn",
+        "Oboe"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_490_submix2",
+      "parent_id": "490",
+      "parent_name": "symphonie_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "symphonie",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Flute",
+        "Bassoon",
+        "Violin_1",
+        "Viola",
+        "Cello"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bassoon",
+        "Cello",
+        "Flute",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_729_native",
+      "parent_id": "729",
+      "parent_name": "organ_concerto_4_3_3_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "organ_concerto_4_3",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Oboe",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Oboe",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_735_native",
+      "parent_id": "735",
+      "parent_name": "organ_concerto_4_6_1_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "organ_concerto_4_6",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Harp",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Harp",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_736_native",
+      "parent_id": "736",
+      "parent_name": "organ_concerto_4_6_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "organ_concerto_4_6",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Harp",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Harp",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_756_native",
+      "parent_id": "756",
+      "parent_name": "in_domini_speravi_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "in_domini_speravi",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_799_native",
+      "parent_id": "799",
+      "parent_name": "string_quartet_10_1_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "string_quartet_10",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_800_native",
+      "parent_id": "800",
+      "parent_name": "string_quartet_10_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "string_quartet_10",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_802_native",
+      "parent_id": "802",
+      "parent_name": "string_quartet_10_4_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "string_quartet_10",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_803_native",
+      "parent_id": "803",
+      "parent_name": "string_quartet_10_5_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "string_quartet_10",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_804_native",
+      "parent_id": "804",
+      "parent_name": "string_quartet_11_1_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "string_quartet_11",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_805_native",
+      "parent_id": "805",
+      "parent_name": "string_quartet_11_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "string_quartet_11",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_807_native",
+      "parent_id": "807",
+      "parent_name": "string_quartet_11_4_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "string_quartet_11",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_998_submix1",
+      "parent_id": "998",
+      "parent_name": "glagolitic_mass_1_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "glagolitic_mass",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Tuba",
+        "Harp",
+        "Clarinet",
+        "Bassoon"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Harp",
+        "Tuba"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_998_submix2",
+      "parent_id": "998",
+      "parent_name": "glagolitic_mass_1_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "glagolitic_mass",
+      "kind": "synthetic_submix",
+      "selected_raw_stems": [
+        "Violin_1",
+        "Viola",
+        "Cello",
+        "Bass",
+        "Timpani"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Bass",
+        "Cello",
+        "Timpani",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1007_native",
+      "parent_id": "1007",
+      "parent_name": "lustspiel_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "lustspiel",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Clarinet",
+        "Horn",
+        "Piccolo",
+        "Trombone",
+        "Tuba"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Clarinet",
+        "Flute",
+        "Horn",
+        "Trombone",
+        "Tuba"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1011_native",
+      "parent_id": "1011",
+      "parent_name": "chorale-preludes_2_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "chorale_preludes",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1012_native",
+      "parent_id": "1012",
+      "parent_name": "chorale-preludes_3_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "chorale_preludes",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1013_native",
+      "parent_id": "1013",
+      "parent_name": "chorale-preludes_4_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "chorale_preludes",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1015_native",
+      "parent_id": "1015",
+      "parent_name": "chorale-preludes_6_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "chorale_preludes",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1016_native",
+      "parent_id": "1016",
+      "parent_name": "chorale-preludes_7_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "chorale_preludes",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1017_native",
+      "parent_id": "1017",
+      "parent_name": "chorale-preludes_8_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "chorale_preludes",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1018_native",
+      "parent_id": "1018",
+      "parent_name": "fantasias_1_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "fantasias_collection",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1020_native",
+      "parent_id": "1020",
+      "parent_name": "fantasias_3_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "fantasias_collection",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Oboe",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Cello",
+        "Oboe",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1023_native",
+      "parent_id": "1023",
+      "parent_name": "fantasias_6_orch",
+      "original_split": "evaluation",
+      "split": "validation",
+      "work_group": "fantasias_collection",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Cello",
+        "Trumpet",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 5,
+      "target_classes": [
+        "Cello",
+        "Trumpet",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1288_native",
+      "parent_id": "1288",
+      "parent_name": "partita_c-minor_3_orch",
+      "original_split": "evaluation",
+      "split": "test",
+      "work_group": "partita_cminor",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bass",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bass",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    },
+    {
+      "scene_id": "sod_1289_native",
+      "parent_id": "1289",
+      "parent_name": "partita_c-minor_4_orch",
+      "original_split": "test",
+      "split": "test",
+      "work_group": "partita_cminor",
+      "kind": "synthetic_native_stems",
+      "selected_raw_stems": [
+        "Bass",
+        "Viola",
+        "Violin_1",
+        "Violin_2"
+      ],
+      "part_count": 4,
+      "target_classes": [
+        "Bass",
+        "Viola",
+        "Violin"
+      ],
+      "start_seconds": 0,
+      "end_seconds": null,
+      "segment": "full_recording",
+      "audio_status": "pending_extraction_and_QA"
+    }
+  ],
+  "urmp": [
+    {
+      "id": 24,
+      "title_short": "Pirates",
+      "part_count": 4,
+      "parts": [
+        "Violin",
+        "Violin",
+        "Viola",
+        "Cello"
+      ],
+      "duration_seconds_documentation": 50,
+      "split": "test",
+      "work_group": "urmp_pirates",
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ]
+    },
+    {
+      "id": 26,
+      "title_short": "King",
+      "part_count": 4,
+      "parts": [
+        "Violin",
+        "Violin",
+        "Viola",
+        "Cello"
+      ],
+      "duration_seconds_documentation": 85,
+      "split": "test",
+      "work_group": "urmp_king",
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ]
+    },
+    {
+      "id": 28,
+      "title_short": "Fugue",
+      "part_count": 4,
+      "parts": [
+        "Flute",
+        "Oboe",
+        "Clarinet",
+        "Bassoon"
+      ],
+      "duration_seconds_documentation": 175,
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ]
+    },
+    {
+      "id": 29,
+      "title_short": "Fugue",
+      "part_count": 4,
+      "parts": [
+        "Flute",
+        "Flute",
+        "Oboe",
+        "Clarinet"
+      ],
+      "duration_seconds_documentation": 172,
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "target_classes": [
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ]
+    },
+    {
+      "id": 31,
+      "title_short": "Slavonic",
+      "part_count": 4,
+      "parts": [
+        "Trumpet",
+        "Trumpet",
+        "Horn",
+        "Trombone"
+      ],
+      "duration_seconds_documentation": 82,
+      "split": "test",
+      "work_group": "slavonic46_potential",
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet"
+      ]
+    },
+    {
+      "id": 32,
+      "title_short": "Fugue",
+      "part_count": 4,
+      "parts": [
+        "Violin",
+        "Violin",
+        "Viola",
+        "Cello"
+      ],
+      "duration_seconds_documentation": 174,
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ]
+    },
+    {
+      "id": 33,
+      "title_short": "Elise",
+      "part_count": 4,
+      "parts": [
+        "Trumpet",
+        "Trumpet",
+        "Horn",
+        "Trombone"
+      ],
+      "duration_seconds_documentation": 48,
+      "split": "test",
+      "work_group": "urmp_elise",
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet"
+      ]
+    },
+    {
+      "id": 34,
+      "title_short": "Fugue",
+      "part_count": 4,
+      "parts": [
+        "Trumpet",
+        "Trumpet",
+        "Horn",
+        "Trombone"
+      ],
+      "duration_seconds_documentation": 174,
+      "split": "validation",
+      "work_group": "bach_fugue_potential",
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet"
+      ]
+    },
+    {
+      "id": 35,
+      "title_short": "Rondeau",
+      "part_count": 4,
+      "parts": [
+        "Violin",
+        "Violin",
+        "Viola",
+        "Double bass"
+      ],
+      "duration_seconds_documentation": 128,
+      "split": "test",
+      "work_group": "urmp_rondeau",
+      "target_classes": [
+        "Bass",
+        "Viola",
+        "Violin"
+      ]
+    },
+    {
+      "id": 36,
+      "title_short": "Rondeau",
+      "part_count": 4,
+      "parts": [
+        "Violin",
+        "Violin",
+        "Viola",
+        "Cello"
+      ],
+      "duration_seconds_documentation": 128,
+      "split": "test",
+      "work_group": "urmp_rondeau",
+      "target_classes": [
+        "Cello",
+        "Viola",
+        "Violin"
+      ]
+    },
+    {
+      "id": 37,
+      "title_short": "Rondeau",
+      "part_count": 4,
+      "parts": [
+        "Flute",
+        "Violin",
+        "Viola",
+        "Clarinet"
+      ],
+      "duration_seconds_documentation": 128,
+      "split": "test",
+      "work_group": "urmp_rondeau",
+      "target_classes": [
+        "Clarinet",
+        "Flute",
+        "Viola",
+        "Violin"
+      ]
+    },
+    {
+      "id": 38,
+      "title_short": "Jerusalem",
+      "part_count": 5,
+      "parts": [
+        "Violin",
+        "Violin",
+        "Viola",
+        "Cello",
+        "Double bass"
+      ],
+      "duration_seconds_documentation": 119,
+      "split": "validation",
+      "work_group": "urmp_jerusalem",
+      "target_classes": [
+        "Bass",
+        "Cello",
+        "Viola",
+        "Violin"
+      ]
+    },
+    {
+      "id": 40,
+      "title_short": "Miserere",
+      "part_count": 5,
+      "parts": [
+        "Flute",
+        "Flute",
+        "Oboe",
+        "Clarinet",
+        "Bassoon"
+      ],
+      "duration_seconds_documentation": 40,
+      "split": "test",
+      "work_group": "urmp_miserere",
+      "target_classes": [
+        "Bassoon",
+        "Clarinet",
+        "Flute",
+        "Oboe"
+      ]
+    },
+    {
+      "id": 42,
+      "title_short": "Arioso",
+      "part_count": 5,
+      "parts": [
+        "Trumpet",
+        "Trumpet",
+        "Horn",
+        "Trombone",
+        "Tuba"
+      ],
+      "duration_seconds_documentation": 255,
+      "split": "test",
+      "work_group": "urmp_arioso",
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet",
+        "Tuba"
+      ]
+    },
+    {
+      "id": 43,
+      "title_short": "Chorale",
+      "part_count": 5,
+      "parts": [
+        "Trumpet",
+        "Trumpet",
+        "Horn",
+        "Trombone",
+        "Tuba"
+      ],
+      "duration_seconds_documentation": 53,
+      "split": "validation",
+      "work_group": "urmp_chorale",
+      "target_classes": [
+        "Horn",
+        "Trombone",
+        "Trumpet",
+        "Tuba"
+      ]
+    },
+    {
+      "id": 44,
+      "title_short": "K515",
+      "part_count": 5,
+      "parts": [
+        "Violin",
+        "Violin",
+        "Viola",
+        "Viola",
+        "Double bass"
+      ],
+      "duration_seconds_documentation": 225,
+      "split": "test",
+      "work_group": "urmp_k515",
+      "target_classes": [
+        "Bass",
+        "Viola",
+        "Violin"
+      ]
+    }
+  ],
+  "summary": {
+    "validation": {
+      "synthsod_parent_recordings": 20,
+      "synthsod_work_groups": 11,
+      "synthsod_scenes": 24,
+      "synthsod_submix_scenes": 8,
+      "synthsod_4part_scenes": 19,
+      "synthsod_5part_scenes": 5,
+      "instrument_work_group_coverage": {
+        "Violin": 10,
+        "Viola": 9,
+        "Cello": 8,
+        "Bass": 2,
+        "Flute": 4,
+        "Clarinet": 3,
+        "Oboe": 4,
+        "Bassoon": 2,
+        "Horn": 2,
+        "Trumpet": 3,
+        "Trombone": 2,
+        "Tuba": 1,
+        "Harp": 2,
+        "Timpani": 3,
+        "untunedpercussion": 1
+      },
+      "urmp_recordings": 6,
+      "urmp_seconds": 867
+    },
+    "test": {
+      "synthsod_parent_recordings": 41,
+      "synthsod_work_groups": 22,
+      "synthsod_scenes": 45,
+      "synthsod_submix_scenes": 8,
+      "synthsod_4part_scenes": 30,
+      "synthsod_5part_scenes": 15,
+      "instrument_work_group_coverage": {
+        "Violin": 18,
+        "Viola": 16,
+        "Cello": 16,
+        "Bass": 3,
+        "Flute": 6,
+        "Clarinet": 6,
+        "Oboe": 5,
+        "Bassoon": 5,
+        "Horn": 5,
+        "Trumpet": 4,
+        "Trombone": 4,
+        "Tuba": 3,
+        "Harp": 4,
+        "Timpani": 3,
+        "untunedpercussion": 2
+      },
+      "urmp_recordings": 10,
+      "urmp_seconds": 1169
+    }
+  },
+  "unselected_original_eval_test_policy": "All original SynthSOD evaluation/test recordings are forbidden for training, including unselected ones.",
+  "excluded_native_sextet_ids": [
+    "360",
+    "361",
+    "363"
+  ],
+  "excluded_sax_urmp_ids": [
+    25,
+    27,
+    30,
+    39,
+    41
+  ],
+  "sources": {
+    "synthsod": "https://zenodo.org/records/13759492",
+    "synthsod_archive": "https://zenodo.org/records/13759492/files/SynthSOD.zip",
+    "urmp": "https://labsites.rochester.edu/air/projects/URMP/URMP_doc.pdf"
+  }
+}

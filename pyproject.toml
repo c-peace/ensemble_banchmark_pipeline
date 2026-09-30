@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=77,<81"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ensemble-pipeline"
+version = "0.1.0"
+license-files = ["competition-kit/LICENSE"]
+description = "Notebook-first audio separation with YAML, GCS and W&B"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "numpy>=1.26,<3",
+  "scipy>=1.11,<2",
+  "soundfile==0.13.1",
+  "museval==0.4.1",
+  "norbert==0.2.1",
+  "torch>=2.2,<3",
+  "tqdm>=4.66,<5",
+  "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+colab = ["wandb>=0.19,<1", "google-cloud-storage>=2,<4"]
+
+dev = ["pytest>=8,<10", "ruff>=0.9,<1", "mypy>=1,<2", "types-PyYAML>=6,<7"]
+
+[tool.setuptools.packages.find]
+where = ["competition-kit"]
+include = ["ensemble_benchmark*"]
+
+[tool.pytest.ini_options]
+testpaths = ["competition-kit/tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.ruff.lint.per-file-ignores]
+"competition-kit/ensemble_benchmark/vendor/*" = ["E741"]
+
+[tool.mypy]
+python_version = "3.11"
+follow_imports = "skip"
+ignore_missing_imports = true
+check_untyped_defs = true
+files = ["competition-kit/ensemble_benchmark/config.py", "competition-kit/ensemble_benchmark/cloud.py"]
+
+[tool.setuptools.package-data]
+ensemble_benchmark = ["selection.json", "vendor/LICENSE.asteroid"]

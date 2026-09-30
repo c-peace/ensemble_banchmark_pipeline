@@ -1,0 +1,22 @@
+schema_version: 1
+experiment:
+  name: smoke
+  wandb_project: ensemble
+  wandb_entity: null
+  wandb_mode: online
+data:
+  gcp_project: YOUR_GCP_PROJECT
+  gcs_uri: gs://YOUR_BUCKET/prepared
+  smoke: true
+training:
+  epochs: 1
+  tiny: true
+  steps_per_shard: 2
+  batch_size: 1
+  samples_per_track: 1
+  segment_seconds: 0.05
+  save_every: 1
+evaluation:
+  allow_partial: true
+  max_seconds: 6.0
+  include_metrics: false

@@ -1,0 +1,159 @@
+"""Generate the standalone Korean Colab guide from the executable notebook."""
+
+import argparse
+import html
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUTPUT = ROOT / "docs" / "colab-guide.html"
+
+
+def code_block(source: str, identifier: str, language: str = "Python") -> str:
+    return (
+        '<div class="code-bar"><span>' + language + '</span>'
+        f'<button type="button" data-copy="{identifier}">코드 복사</button></div>'
+        f'<pre><code id="{identifier}">{html.escape(source.rstrip())}</code></pre>'
+    )
+
+
+def render() -> str:
+    notebook = json.loads((ROOT / "pipeline.ipynb").read_text(encoding="utf-8"))
+    cards = []
+    heading = ""
+    for cell in notebook["cells"]:
+        source = "".join(cell["source"])
+        if cell["cell_type"] == "markdown":
+            heading = source
+        elif cell["cell_type"] == "code":
+            number = len(cards) + 1
+            title, _, description = heading.partition("\n")
+            optional = '<span class="tag">기본 모델 예제 · 교체 가능</span>' if number in (4, 5) else ""
+            cards.append(
+                f'<section class="cell" id="cell-{number}">'
+                f'<h2>{html.escape(title.lstrip("# "))}</h2>{optional}'
+                f'<p>{html.escape(description.strip())}</p>'
+                + code_block(source, f"code-{number}") + '</section>'
+            )
+    if len(cards) != 6:
+        raise ValueError("The guide expects six notebook code cells.")
+    yaml_source = (ROOT / "configs" / "experiments" / "smoke.yaml").read_text(encoding="utf-8")
+    template = '''<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Colab 학습 · 셀 복사 가이드</title>
+<style>
+:root { color-scheme: light; --ink:#182a39; --muted:#506272; --line:#d9e3e8; --accent:#126958; }
+* { box-sizing:border-box; }
+body { margin:0; background:#f3f6f8; color:var(--ink); font:16px/1.75 system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; }
+main { max-width:1020px; margin:0 auto; padding:48px 24px 80px; }
+header { margin-bottom:28px; }
+.eyebrow { color:var(--accent); font-weight:750; letter-spacing:.06em; font-size:13px; }
+h1 { font-size:clamp(28px,5vw,42px); line-height:1.3; margin:10px 0 16px; letter-spacing:-.04em; }
+h2 { font-size:23px; line-height:1.45; margin:0 0 12px; }
+h3 { font-size:18px; margin:20px 0 8px; }
+p { margin:10px 0 18px; }
+.lead { color:var(--muted); max-width:760px; font-size:18px; }
+a { color:var(--accent); text-underline-offset:3px; }
+nav { display:flex; flex-wrap:wrap; gap:8px; margin:24px 0; }
+nav a { border:1px solid var(--line); background:white; border-radius:8px; padding:7px 12px; text-decoration:none; font-size:14px; }
+.panel,.cell { background:white; border:1px solid var(--line); border-radius:16px; padding:28px; margin:20px 0; scroll-margin-top:20px; min-width:0; }
+.note { border-left:4px solid var(--accent); background:#edf6f2; padding:14px 18px; border-radius:0 8px 8px 0; }
+ol,ul { padding-left:24px; } li { margin:7px 0; }
+code { font:14px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace; overflow-wrap:anywhere; }
+p code,li code { background:#edf1f4; padding:2px 5px; border-radius:4px; }
+.code-bar { display:flex; justify-content:space-between; align-items:center; background:#203747; color:#c8dce7; padding:9px 14px; border-radius:9px 9px 0 0; margin-top:18px; font-size:12px; }
+button { border:1px solid #809cae; border-radius:6px; background:#304f62; color:white; padding:7px 13px; font:inherit; font-size:13px; cursor:pointer; }
+button:hover { background:#41677e; } button:focus-visible,a:focus-visible,summary:focus-visible { outline:3px solid #dd9300; outline-offset:3px; }
+pre { margin:0; padding:20px; background:#152936; color:#edf6fc; overflow:auto; border-radius:0 0 9px 9px; tab-size:4; }
+pre code { white-space:pre; overflow-wrap:normal; }
+.tag { display:inline-block; background:#f8efd8; color:#755511; border-radius:6px; padding:3px 9px; font-size:12px; }
+details { margin-top:24px; color:var(--muted); } summary { cursor:pointer; font-weight:650; }
+footer { color:var(--muted); font-size:13px; margin-top:32px; }
+#copy-status { position:fixed; bottom:20px; left:50%; transform:translateX(-50%); background:#126958; color:white; padding:9px 18px; border-radius:8px; max-width:90%; box-shadow:0 4px 20px #0002; }
+#copy-status:empty { display:none; }
+@media(max-width:600px) { main { padding:28px 14px 50px; } .panel,.cell { padding:20px 16px; border-radius:12px; } h2 { font-size:20px; } pre { padding:14px; } }
+@media print { body { background:white; } main { max-width:none; padding:0; } button,nav,#copy-status { display:none; } pre { white-space:pre-wrap; } pre code { white-space:pre-wrap; } .cell { break-inside:auto; } }
+</style>
+</head>
+<body><main>
+<header><div class="eyebrow">YAML + GITHUB + GCP + W&amp;B</div>
+<h1>Colab에서, 셀을 붙여넣고 학습하세요.</h1>
+<p class="lead">아래 코드를 ipynb의 코드 셀에 하나씩 복사해서 위에서부터 실행하세요. 새 실험을 만들 때는 <strong>ipynb와 YAML만 GitHub에 추가</strong>하면 됩니다.</p>
+<p>공통 Python 코드는 이 저장소에 한 번 포함되어 있으며 1번 셀이 가져옵니다. 실험마다 Python 패키지나 실행 스크립트를 새로 만들 필요가 없습니다.</p>
+</header>
+<nav aria-label="셀 바로가기"><a href="#prepare">실행 전 준비</a><a href="#cell-1">1 · GitHub</a><a href="#cell-2">2 · 데이터</a><a href="#cell-3">3 · W&amp;B</a><a href="#cell-4">4 · 학습</a><a href="#cell-5">5 · 평가</a><a href="#cell-6">6 · 저장</a></nav>
+<section class="panel" id="prepare"><h2>실행 전, 세 가지만 준비하세요</h2>
+<ol><li><strong>GitHub:</strong> 이 저장소의 공통 코드를 올리고, 사용할 ipynb와 YAML을 함께 올립니다. Colab에서 노트북을 연 뒤 <strong>런타임 → 런타임 유형 변경 → GPU</strong>를 선택합니다.</li>
+<li><strong>GCP:</strong> 준비된 데이터를 버킷에 올리고 YAML의 <code>data.gcs_uri</code>를 버킷 경로로, <code>data.gcp_project</code>를 GCP 프로젝트 ID로 바꿉니다. 2번 셀에서 버킷을 읽을 권한이 있는 Google 계정으로 인증합니다.</li>
+<li><strong>W&amp;B:</strong> Colab 왼쪽 열쇠 아이콘의 Secrets에 <code>WANDB_API_KEY</code>를 등록하고 노트북 접근을 허용합니다. 비공개 GitHub 저장소라면 <code>GITHUB_TOKEN</code>도 등록합니다. 키는 YAML이나 GitHub에 올리지 마세요.</li></ol>
+<h3>GCP 데이터 폴더</h3><p><code>gcs_uri</code>는 아래 <code>prepared</code> 폴더를 가리킵니다. <strong>train과 valid는 각각 train/과 validation/이라는 이름</strong>으로 둡니다. 두 manifest가 가리키는 실제 음원 파일도 함께 있어야 합니다. DVC 캐시나 가공 전 원본 데이터 경로를 넣으면 안 됩니다.</p>
+<pre><code>gs://내버킷/prepared/
+├── train/
+│   ├── manifest.json
+│   └── … 실제 음원 파일
+└── validation/
+    ├── manifest.json
+    └── … 실제 음원 파일</code></pre>
+<h3>YAML 예제</h3><p>아래 내용을 <code>configs/experiments/smoke.yaml</code>로 저장합니다. 먼저 <code>gcs_uri</code>, <code>gcp_project</code>, <code>wandb_project</code>를 내 값으로 바꾸세요. 처음에는 이 작은 설정으로 전체 연결을 확인합니다.</p>
+__YAML__
+<p>내 모델의 추가 설정은 YAML의 <code>parameters</code>에 자유롭게 넣고 노트북에서 읽으세요. 공통 Python 코드를 수정할 필요가 없습니다.</p>
+<pre><code># YAML: parameters: {hidden_size: 128, dropout: 0.2}
+# Python: hidden_size = config["parameters"]["hidden_size"]</code></pre>
+<p class="note"><strong>내 학습 노트북에 붙일 때:</strong> 1~3번 셀은 상단, 내 학습·평가 코드는 가운데, 6번 셀은 하단에 넣습니다. 아래 4~5번은 제공 모델을 실행하는 선택 예제입니다. 내 코드에서는 YAML의 <code>config</code>, 데이터 경로 <code>TRAIN_ROOT</code>·<code>VALID_ROOT</code>와 W&amp;B의 <code>run</code>을 사용하면 됩니다.</p>
+</section>
+__CELLS__
+<section class="panel"><h2>내 학습 코드를 쓴다면, 마지막으로 확인하세요</h2>
+<ul><li>학습 중 그래프가 필요하면 루프에서 <code>run.log({"train/loss": float(loss)})</code>를 호출합니다.</li>
+<li>6번 셀 실행 전에 <code>CHECKPOINT</code>를 저장한 모델 파일 경로로 지정합니다. <code>REPORT_PATH</code>는 평가 JSON 파일 경로입니다. 3번 셀에서 <code>CHECKPOINT</code>와 <code>REPORT_PATH</code>를 <code>None</code>으로 초기화하므로, 평가 파일이 없다면 <code>REPORT_PATH</code>는 그대로 두세요.</li>
+<li><code>CONFIG_SNAPSHOT</code>은 3번 셀에서 이미 저장됩니다. 모델과 함께 실제 사용한 설정도 보관합니다.</li>
+<li><strong>Colab 연결을 끊기 전에 6번 셀을 실행</strong>하세요. 마지막 셀이 실행되기 전에 런타임이 종료되면 모델은 W&amp;B에 업로드되지 않습니다.</li>
+<li>W&amp;B 업로드는 <code>experiment.wandb_mode: online</code>일 때 이루어집니다. <code>offline</code>은 로컬 기록만, <code>disabled</code>는 W&amp;B 기록을 끕니다. 두 모드 모두 온라인 업로드는 하지 않습니다.</li>
+<li>학습·평가·저장 시 설정이 3번 셀에서 저장한 스냅샷과 같은지 확인합니다. 런타임에서 설정을 바꿨다면 <strong>3번 셀을 다시 실행해 새 실험을 시작</strong>하세요. GitHub의 YAML을 수정했다면 새 Colab 런타임에서 1번부터 실행합니다.</li></ul>
+</section>
+<details><summary>유지보수자용 정보</summary><p>이 가이드는 <code>pipeline.ipynb</code>의 여섯 코드 셀과 <code>configs/experiments/smoke.yaml</code>에서 생성합니다. 수정 후 <code>python scripts/build_guide.py</code>, 일치 확인은 <code>python scripts/build_guide.py --check</code>를 실행합니다. 코드 셀은 원본 그대로 복사됩니다.</p><p>1번 셀은 공통 코드를 내려받아 <code>pip install -e ".[colab]"</code>로 설치합니다. 관련 문서: <a href="https://docs.cloud.google.com/python/docs/reference/storage/latest/summary_method">Google Cloud Storage Python</a> · <a href="https://docs.wandb.ai/models/ref/python/functions">W&amp;B Python</a>.</p></details>
+<footer>별도 설치 없이 이 HTML 파일을 브라우저에서 열 수 있습니다. 복사 버튼을 사용할 수 없다면 코드 영역을 직접 선택해 복사하세요.</footer>
+</main><div id="copy-status" role="status" aria-live="polite"></div>
+<script>
+let statusTimer;
+async function copyCode(button) {
+  const value = document.getElementById(button.dataset.copy).textContent;
+  let copied = false;
+  try { if (navigator.clipboard && window.isSecureContext) { await navigator.clipboard.writeText(value); copied = true; } } catch (_) {}
+  if (!copied) {
+    const area = document.createElement('textarea');
+    area.value = value; area.setAttribute('readonly', '');
+    area.style.position = 'fixed'; area.style.left = '-9999px';
+    document.body.appendChild(area); area.select();
+    try { copied = document.execCommand('copy'); } catch (_) {}
+    area.remove(); button.focus();
+  }
+  const status = document.getElementById('copy-status');
+  status.textContent = copied ? '복사했습니다. Colab 코드 셀에 붙여넣으세요.' : '코드 영역을 직접 선택해서 복사하세요.';
+  clearTimeout(statusTimer); statusTimer = setTimeout(() => { status.textContent = ''; }, 3500);
+}
+document.querySelectorAll('[data-copy]').forEach(button => button.addEventListener('click', () => copyCode(button)));
+</script></body></html>
+'''
+    return template.replace("__YAML__", code_block(yaml_source, "code-yaml", "YAML")).replace("__CELLS__", "\n".join(cards))
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--check", action="store_true", help="Fail if the saved guide is stale.")
+    args = parser.parse_args()
+    result = render()
+    if args.check:
+        if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8") != result:
+            parser.exit(1, "Guide is stale. Run python scripts/build_guide.py\n")
+        print("Guide matches notebook and YAML.")
+    else:
+        OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+        OUTPUT.write_text(result, encoding="utf-8")
+        print(f"Generated {OUTPUT}")
+
+
+if __name__ == "__main__":
+    main()

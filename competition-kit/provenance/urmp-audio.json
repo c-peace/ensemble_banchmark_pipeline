@@ -1,0 +1,262 @@
+[
+  {
+    "path": "work/raw-urmp/Dataset/28_Fugue_fl_ob_cl_bn/AuSep_1_fl_28_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8379571,
+    "duration": 174.57439583333334,
+    "sha256": "925dc2385129c27e98ef68cfbac026e967422a2d6c9ec713d447e068ea93cf75",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/28_Fugue_fl_ob_cl_bn/AuSep_2_ob_28_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8379571,
+    "duration": 174.57439583333334,
+    "sha256": "bea13e1db892811f89c8627d19da9e6325b48b548b8e62455feabd80e1b7cf99",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/28_Fugue_fl_ob_cl_bn/AuSep_3_cl_28_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8379571,
+    "duration": 174.57439583333334,
+    "sha256": "b798d632b9f98ccdbc6b4927103ef0a8d8f93c8319756aeee1ea239ef62405d0",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/28_Fugue_fl_ob_cl_bn/AuSep_4_bn_28_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8379571,
+    "duration": 174.57439583333334,
+    "sha256": "95f37f45df229853331be2b4e9bc2a35a113081b2bec436add90cff674e380e8",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/29_Fugue_fl_fl_ob_cl/AuSep_1_fl_29_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8256248,
+    "duration": 172.00516666666667,
+    "sha256": "d082e05a99bb19987e691012d03c368c73f65e6dc046c576310cf884bdfe91f6",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/29_Fugue_fl_fl_ob_cl/AuSep_2_fl_29_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8256248,
+    "duration": 172.00516666666667,
+    "sha256": "272968ef14f792e223b786e2a3a5a50e636b01360c0be2b2434225f69a8838fc",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/29_Fugue_fl_fl_ob_cl/AuSep_3_ob_29_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8256248,
+    "duration": 172.00516666666667,
+    "sha256": "232c39f9ed9ab89381cc6dec5b1b66a6432753414ef496522aa7f544c3c61ad4",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/29_Fugue_fl_fl_ob_cl/AuSep_4_cl_29_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8256248,
+    "duration": 172.00516666666667,
+    "sha256": "524e28f3ee8da8b14eff03325d556c440a6a83c83959177514aa63d22985e528",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/32_Fugue_vn_vn_va_vc/AuSep_1_vn_32_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8334726,
+    "duration": 173.640125,
+    "sha256": "04eac840edf7d10d41fafb3da8e4e013e9ebedec5c929a3f98e0f7f0550c5f53",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/32_Fugue_vn_vn_va_vc/AuSep_2_vn_32_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8334726,
+    "duration": 173.640125,
+    "sha256": "59c763acdc37c6a75cb623ec7cfff2e579976c8189f385cbba99dda38617851e",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/32_Fugue_vn_vn_va_vc/AuSep_3_va_32_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8334726,
+    "duration": 173.640125,
+    "sha256": "5dc83dfc2727bc83ca6ad5604e7b6fe0670ab68fec4977e8f345eef586ac3016",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/32_Fugue_vn_vn_va_vc/AuSep_4_vc_32_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8334726,
+    "duration": 173.640125,
+    "sha256": "5fb96c224c7330b5249b4316fd69d1793b83c8cec866bf865729160e489c8961",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/34_Fugue_tpt_tpt_hn_tbn/AuSep_1_tpt_34_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8360352,
+    "duration": 174.174,
+    "sha256": "d74cf12bd84a84eb7b00f692b5c8213600e3e29feda7e2d7d91e051e6eaef673",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/34_Fugue_tpt_tpt_hn_tbn/AuSep_2_tpt_34_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8360352,
+    "duration": 174.174,
+    "sha256": "03251ffd89d7af10c6caa5f950bfddd36c404fa6e98921ea903ab338a4aaac0a",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/34_Fugue_tpt_tpt_hn_tbn/AuSep_3_hn_34_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8360352,
+    "duration": 174.174,
+    "sha256": "88c4c3f99ed8e4441458f22937bfc248004d9aa503cc2c9fd9ab45713af10780",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/34_Fugue_tpt_tpt_hn_tbn/AuSep_4_tbn_34_Fugue.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 8360352,
+    "duration": 174.174,
+    "sha256": "53fbf68778b84e5e203b9e2df21552c61fa6eec951a8fa7adacda5119a31a360",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/38_Jerusalem_vn_vn_va_vc_db/AuSep_1_vn_38_Jerusalem.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 5717712,
+    "duration": 119.119,
+    "sha256": "0a9c9c274fa645286d5acf6bdcfb3c0c4abcb30d4d3fdf6737d856021ca3f7ea",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/38_Jerusalem_vn_vn_va_vc_db/AuSep_2_vn_38_Jerusalem.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 5717712,
+    "duration": 119.119,
+    "sha256": "542d61d7a223cbd4b521a7eba0658545ac0de330fb903055034201bc1e787e69",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/38_Jerusalem_vn_vn_va_vc_db/AuSep_3_va_38_Jerusalem.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 5717712,
+    "duration": 119.119,
+    "sha256": "360452d5bbdc5da9f104dc712256679f303c4f0f856bdc3c1d22279a03204b6a",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/38_Jerusalem_vn_vn_va_vc_db/AuSep_4_vc_38_Jerusalem.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 5717712,
+    "duration": 119.119,
+    "sha256": "cfda23a5f6358b63373d282b4f3b48203d99f80f8deb0496cd1548afed22a3b0",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/38_Jerusalem_vn_vn_va_vc_db/AuSep_5_db_38_Jerusalem.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 5717712,
+    "duration": 119.119,
+    "sha256": "29a34b74bca3f7e726aeaad8e2ab6d0e1c598efb661527f40679e92e5f2d848a",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_1_tpt_43_Chorale.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 2565763,
+    "duration": 53.45339583333333,
+    "sha256": "bd53f83fc9a41883a84cf3b9db2d45cb7707e49d2a886d54308962e0a023a2ee",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_2_tpt_43_Chorale.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 2565763,
+    "duration": 53.45339583333333,
+    "sha256": "72d544f34b07e6a6da31f90a2131cb02dcb946cd79a623c2545f300ba4e6b7d9",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_3_hn_43_Chorale.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 2565763,
+    "duration": 53.45339583333333,
+    "sha256": "4a6ea6284cc3743091fd40dda83c019be871fbe7ce14407fd23af4e7c8803b5e",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_4_tbn_43_Chorale.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 2565763,
+    "duration": 53.45339583333333,
+    "sha256": "94189903bc74ec48d8be50e42d8cf85c874b550d2690d27abf0903b4fd679dc8",
+    "zip_crc32_verified": true
+  },
+  {
+    "path": "work/raw-urmp/Dataset/43_Chorale_tpt_tpt_hn_tbn_tba/AuSep_5_tba_43_Chorale.wav",
+    "sample_rate": 48000,
+    "channels": 1,
+    "sample_width": 3,
+    "frames": 2565763,
+    "duration": 53.45339583333333,
+    "sha256": "90910839386a502cd9d12d8e3401d2cce72c777876ddc57d7ef9e5373d2f39b2",
+    "zip_crc32_verified": true
+  }
+]
