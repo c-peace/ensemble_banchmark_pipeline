@@ -5,7 +5,7 @@ experiment:
   wandb_entity: ensemble_banchmark
   wandb_mode: online
 data:
-  gcp_project: ensembleBanchmark
+  gcp_project: ensemblebanchmark
   gcs_uri: gs://ensemble_banchmark/prepared
   smoke: true
 training:
