@@ -2,7 +2,7 @@ schema_version: 1
 experiment:
   name: baseline
   wandb_project: ensemble
-  wandb_entity: ensemble_banchmark
+  wandb_entity: orangekiwi-ajou-university
   wandb_mode: online
 data:
   gcp_project: ensemblebanchmark
