@@ -2,11 +2,11 @@ schema_version: 1
 experiment:
   name: baseline
   wandb_project: ensemble
-  wandb_entity: null
+  wandb_entity: ensemble_banchmark
   wandb_mode: online
 data:
-  gcp_project: YOUR_GCP_PROJECT
-  gcs_uri: gs://YOUR_BUCKET/prepared
+  gcp_project: ensemblebanchmark
+  gcs_uri: gs://ensemble_banchmark/prepared
   sample_rate: 44100
   smoke: false
   excluded_train_ids: [sod_507, sod_968]
@@ -30,4 +30,4 @@ evaluation:
   allow_partial: false
   max_seconds: null
   reuse_predictions: true
-  include_metrics: false
+  include_metrics: true
