@@ -37,10 +37,29 @@ class FakeArtifact:
         self.waited = True
 
 
+class FakeSummary:
+    """Match W&B's keyed access without dict membership/iteration support."""
+
+    def __init__(self):
+        self.values = {}
+
+    def keys(self):
+        return list(self.values)
+
+    def __getitem__(self, key):
+        return self.values[key]
+
+    def __setitem__(self, key, value):
+        self.values[key] = value
+
+    def __delitem__(self, key):
+        del self.values[key]
+
+
 class FakeRun:
     def __init__(self, **kwargs):
         self.config = kwargs["config"]
-        self.summary = {}
+        self.summary = FakeSummary()
         self.events = []
         self.finished = False
         self.url = "https://wandb.example/test"
@@ -57,7 +76,7 @@ class FakeRun:
 
 
 @pytest.mark.parametrize("evaluate", [True, False])
-def test_cells_data_to_real_training_and_artifact(prepared, tmp_path, monkeypatch, evaluate):
+def test_cells_data_to_real_training_and_artifact(prepared, tmp_path, monkeypatch, evaluate):  # noqa: F811
     import numpy as np
     import soundfile as sf
     import yaml
@@ -211,4 +230,4 @@ def test_training_failure_clears_previous_results(tmp_path, monkeypatch):
     with pytest.raises(RuntimeError, match="data unavailable"):
         exec(CELLS[3], scope)
     assert scope["CHECKPOINT"] is None and scope["REPORT_PATH"] is None
-    assert "evaluation" not in run.summary
+    assert "evaluation" not in run.summary.keys()

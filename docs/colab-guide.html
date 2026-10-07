@@ -62,11 +62,11 @@ footer { color:var(--muted); font-size:13px; margin-top:32px; }
 experiment:
   name: smoke
   wandb_project: ensemble
-  wandb_entity: null
+  wandb_entity: ensemble_banchmark
   wandb_mode: online
 data:
-  gcp_project: YOUR_GCP_PROJECT
-  gcs_uri: gs://YOUR_BUCKET/prepared
+  gcp_project: ensemblebanchmark
+  gcs_uri: gs://ensemble_banchmark/prepared
   smoke: true
 training:
   epochs: 1
@@ -194,7 +194,7 @@ if config != yaml.safe_load(CONFIG_SNAPSHOT.read_text()):
     raise ValueError(&quot;설정이 변경되었습니다. 3번 셀에서 새 실험을 시작하세요.&quot;)
 CHECKPOINT = None
 REPORT_PATH = None
-if &quot;evaluation&quot; in run.summary:
+if &quot;evaluation&quot; in run.summary.keys():
     del run.summary[&quot;evaluation&quot;]
 DEVICE = &quot;cuda&quot; if torch.cuda.is_available() else &quot;cpu&quot;
 release = runtime.build_local_release(
@@ -217,7 +217,7 @@ print(&quot;체크포인트:&quot;, CHECKPOINT)</code></pre></section>
 <section class="cell" id="cell-5"><h2>5번 셀 · 평가하기</h2><span class="tag">기본 모델 예제 · 교체 가능</span><p>YAML의 evaluation.enabled가 true이면 validation으로 평가합니다. smoke 결과는 연결 확인용이며 전체 모델 성능 점수가 아닙니다.</p><div class="code-bar"><span>Python</span><button type="button" data-copy="code-5">코드 복사</button></div><pre><code id="code-5">if config != yaml.safe_load(CONFIG_SNAPSHOT.read_text()):
     raise ValueError(&quot;설정이 변경되었습니다. 3번 셀에서 새 실험을 시작하세요.&quot;)
 REPORT_PATH = None
-if &quot;evaluation&quot; in run.summary:
+if &quot;evaluation&quot; in run.summary.keys():
     del run.summary[&quot;evaluation&quot;]
 if config[&quot;evaluation&quot;][&quot;enabled&quot;]:
     evaluation = dict(config[&quot;evaluation&quot;])
