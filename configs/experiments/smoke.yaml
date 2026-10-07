@@ -2,11 +2,11 @@ schema_version: 1
 experiment:
   name: smoke
   wandb_project: ensemble
-  wandb_entity: null
+  wandb_entity: ensemble_banchmark
   wandb_mode: online
 data:
-  gcp_project: YOUR_GCP_PROJECT
-  gcs_uri: gs://YOUR_BUCKET/prepared
+  gcp_project: ensembleBanchmark
+  gcs_uri: gs://ensemble_banchmark/prepared
   smoke: true
 training:
   epochs: 1
