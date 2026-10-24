@@ -44,14 +44,20 @@ def _target(root: Path, name: str) -> Path:
     return target
 
 
-def download_data(uri: str, destination: str | Path, *, project: str | None = None) -> Path:
+def download_data(
+    uri: str, destination: str | Path, *, project: str | None = None,
+    splits: tuple[str, ...] = ("train", "validation"),
+) -> Path:
     """Download train/ and validation/ from an unpacked ``gs://bucket/prefix``.
 
-    Both splits must contain a nonempty manifest.json. Files are replaced atomically
+    Requested splits must contain a nonempty manifest.json. Files are replaced atomically
     and reused only when their checksum matches GCS. Interrupted calls can be rerun.
     Extra local files are retained; the downloaded manifests define dataset membership.
     The caller supplies Google credentials (for example Colab's authenticate_user()).
     """
+    if (not splits or len(set(splits)) != len(splits)
+            or any(split not in ("train", "validation") for split in splits)):
+        raise ValueError("splits must select train and/or validation without duplicates")
     parsed = urlsplit(uri)
     if parsed.scheme != "gs" or not parsed.netloc or parsed.query or parsed.fragment:
         raise ValueError("Expected gs://bucket/path to an unpacked prepared dataset")
@@ -64,7 +70,7 @@ def download_data(uri: str, destination: str | Path, *, project: str | None = No
     client = storage.Client(project=project)
     root = Path(destination).expanduser().absolute()
     objects: list[tuple[Any, Path]] = []
-    for split in ("train", "validation"):
+    for split in splits:
         split_prefix = f"{prefix}{split}/"
         blobs = list(client.list_blobs(parsed.netloc, prefix=split_prefix))
         if not any(b.name == f"{split_prefix}manifest.json" and b.size for b in blobs):
@@ -78,7 +84,7 @@ def download_data(uri: str, destination: str | Path, *, project: str | None = No
                 continue
             target = _target(root, blob.name[len(prefix) :])
             objects.append((blob, target))
-    # Validate both remote splits before modifying any local dataset files.
+    # Validate requested remote splits before modifying any local dataset files.
     for blob, target in objects:
         _target(root, target.relative_to(root).as_posix())
         if _matches(target, blob):

@@ -29,6 +29,22 @@ Colab이 종료되면 로컬 파일이 사라질 수 있으므로 종료 전에 
 
 ## 코드 위치
 
+### SAM-Audio Small 사전학습 평가
+
+[sam_audio_pretrained.ipynb](sam_audio_pretrained.ipynb)와
+[sam_audio_pretrained.yaml](configs/experiments/sam_audio_pretrained.yaml)을 사용합니다.
+`exp/peace/Sam_audio` 브랜치의 코드를 받아 **추가 학습 없이 validation만** 평가합니다.
+Hugging Face 모델 접근 승인 후 Colab Secrets에 `HF_TOKEN`과 `WANDB_API_KEY`를 등록하세요.
+GPU 런타임에서 1~6번 셀을 실행합니다. 기본 BF16은 지원 GPU가 필요하며 실제 GPU 실행은 아직 미검증입니다.
+
+YAML `parameters.prompts`에 악기별 프롬프트가 있습니다. `Bass`는 double bass,
+`Horn`은 french horn으로 구분합니다. 기본은 전체 장면 평가이며, 첫 연결 확인에는
+`parameters.max_scenes: 1`을 지정하세요. 일부 장면 결과는 diagnostic으로 표시합니다.
+프롬프트·모델 revision·SDR·추론 시간·GPU 할당 메모리 피크를 W&B에 기록합니다.
+6번 셀은 평가 JSON과 설정을 저장하며, 사전학습 가중치나 전체 예측 음원은 업로드하지 않습니다.
+
+### 공통 파일
+
 - `pipeline.ipynb`: 복사 가능한 준비·학습·평가·저장 셀
 - `configs/experiments/`: 실험 YAML
 - `competition-kit/ensemble_benchmark/`: 데이터 다운로드, 모델, 학습·평가

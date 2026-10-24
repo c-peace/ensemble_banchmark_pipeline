@@ -1,0 +1,41 @@
+# 추가 학습 없이 전체 validation 평가. max_scenes: 1이면 일부 장면 진단 평가.
+# chunk_seconds는 처리 단위이며, 전체 음원의 평가 길이를 줄이지 않습니다.
+schema_version: 1
+experiment:
+  name: sam-audio-small-pretrained
+  wandb_project: ensemble
+  wandb_entity: orangekiwi-ajou-university
+  wandb_mode: online
+data:
+  gcp_project: ensemblebanchmark
+  gcs_uri: gs://ensemble_banchmark/prepared
+  smoke: false
+evaluation:
+  enabled: true
+  allow_partial: false
+  max_seconds: null
+  include_metrics: false
+parameters:
+  model_id: facebook/sam-audio-small
+  model_revision: main
+  dtype: bfloat16
+  chunk_seconds: 10.0
+  context_seconds: 1.0
+  seed: 42
+  max_scenes: null
+  prompts:
+    Violin: violin playing
+    Viola: viola playing
+    Cello: cello playing
+    Bass: double bass playing
+    Flute: flute playing
+    Clarinet: clarinet playing
+    Oboe: oboe playing
+    Bassoon: bassoon playing
+    Horn: french horn playing
+    Trumpet: trumpet playing
+    Trombone: trombone playing
+    Tuba: tuba playing
+    Harp: harp playing
+    Timpani: timpani playing
+    untunedpercussion: unpitched percussion playing

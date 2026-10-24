@@ -157,3 +157,20 @@ def test_crc32c_reuses_composite_object(remote, tmp_path, monkeypatch):
     download_data("gs://dataset/prepared", tmp_path)
     download_data("gs://dataset/prepared", tmp_path)
     assert len(blobs[1].calls) == 1
+
+
+def test_validation_only_does_not_list_or_download_train(remote, tmp_path):
+    blobs, requests = remote
+    download_data('gs://dataset/prepared', tmp_path, splits=('validation',))
+    assert requests == [('dataset', 'prepared/validation/')]
+    assert not (tmp_path / 'train').exists()
+    assert [len(blob.calls) for blob in blobs] == [0, 0, 1, 0]
+
+
+@pytest.mark.parametrize('splits', [(), ('test',), ('validation', 'validation'), ('../train',)])
+def test_invalid_split_selection_has_no_side_effects(remote, tmp_path, splits):
+    _, requests = remote
+    with pytest.raises(ValueError, match='splits'):
+        download_data('gs://dataset/prepared', tmp_path, splits=splits)
+    assert requests == []
+    assert list(tmp_path.iterdir()) == []
